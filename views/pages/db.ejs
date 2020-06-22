@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+  <!-- <link rel="stylesheet" href="../../public/stylesheets/style.css"> -->
+</head>
+
+<style>
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+
+<body>
+
+<% include ../partials/nav.ejs %>
+
+<div class="container">
+<h2>Database Results</h2>
+
+<form action="/everyone" method="GET">
+
+  <button type="submit">Refresh Table</button>
+</form>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Name</th> 
+    <th>Size</th>
+    <th>Height</th>
+    <th>Type</th>
+  </tr>
+
+  <% rows.forEach(function(r) { %>
+    <tr>
+      <th><%= r.id %></th> 
+      <th><%= r.name %></th> 
+      <th><%= r.size %></th> 
+      <th><%= r.height %></th> 
+      <th><%= r.type %></th>
+    </tr>
+  <% }); %>
+
+
+</table>
+
+
+
+<form id="addUser" action="/addusers" method="POST">
+  <h2>To Add Users</h2>
+  <label for="id">ID</label>
+  <input class="u-full-width" type="text" id="id" name="id">
+
+  <br>
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" id="name" name="name">
+
+  <br>
+  <label for="height">Height</label>
+  <input class="u-full-width" type="text" id="height" name="height">
+
+  <br>
+  <label for="size">Size</label>
+  <input class="u-full-width" type="text" id="size" name="size">
+
+  <br>
+  <label for="type">Type</label>
+  <input class="u-full-width" type="text" id="type" name="type">
+  
+  <br>
+  <button type="submit">Add Users</button>
+
+</form>
+
+<form id="deleteUser" action="/deleteusers" method="POST">
+  <h2>To Delete User</h2>
+
+  <br>
+  <label for="id">id</label>
+  <input class="u-full-width" type="text" id="id" name="id">
+
+  <br>
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" id="name" name="name">
+
+  <br>
+  <button type="submit">Delete User</button>
+
+</form>
+
+<!-- Modify Name -->
+<form action="/modifyname" method="POST">
+  <h2>To Modify User Name</h2>
+
+  <h3>From</h3>
+  <label for="id">id</label>
+  <input class="u-full-width" type="text" id="id" name="id" required>
+
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" id="name" name="name">
+
+  <h3>To</h3>
+
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" id="name" name="name">
+  
+  <button type="submit">Modify Name</button>
+
+</form>
+
+<!-- modify height -->
+<form action="/modifyheight" method="POST">
+  <h2>To Modify User Height</h2>
+
+  <h3>From</h3>
+  <label for="id">id</label>
+  <input class="u-full-width" type="text" id="id" name="id" required>
+
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" id="name" name="name">
+
+  <h3>To</h3>
+
+  <label for="height">Height</label>
+  <input class="u-full-width" type="text" id="height" name="height">
+  
+  <button type="submit">Modify Height</button>
+
+</form>
+
+<!-- modify size -->
+<form action="/modifysize" method="POST">
+  <h2>To Modify User Size</h2>
+
+  <h3>From</h3>
+  <label for="id">id</label>
+  <input class="u-full-width" type="text" id="id" name="id" required>
+
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" id="name" name="name">
+
+  <h3>To</h3>
+
+  <label for="size">Size</label>
+  <input class="u-full-width" type="text" id="size" name="size">
+  
+  <button type="submit">Modify Size</button>
+
+</form>
+
+<!-- modify type -->
+<form action="/modifytype" method="POST">
+  <h2>To Modify User Type</h2>
+
+  <h3>From</h3>
+  <label for="id">id</label>
+  <input class="u-full-width" type="text" id="id" name="id" required>
+
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" id="name" name="name">
+
+  <h3>To</h3>
+
+  <label for="type">Type</label>
+  <input class="u-full-width" type="text" id="type" name="type">
+  
+  <button type="submit">Modify Type</button>
+
+</form>
+
+  <!-- <br> -->
+  <!-- <label for="height">Height</label>
+  <input class="u-full-width" type="text" id="height" name="height">
+
+  <br>
+  <label for="size">Size</label>
+  <input class="u-full-width" type="text" id="size" name="size">
+
+  <br>
+  <label for="type">Type</label>
+  <input class="u-full-width" type="text" id="type" name="type"> -->
+
+  <!-- <br> -->
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

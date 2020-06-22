@@ -1,0 +1,48 @@
+/* class - element */
+
+body {
+    color: red;
+}
+
+/* .red {
+    background-color: yellow;
+} */
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#navigate1 {
+    font-size: 2em;
+    font-family: cursive;
+    border: 1px solid red;
+}
+
+img {
+    border: 1px solid black;
+    width: 200px;
+    border-radius: 30%;
+    /* float: left; */
+    position: relative; 
+    top: -50px;
+    left: 125px;
+    z-index: -1;
+    
+}
+
+/* attribute */
+[type="text"] {
+    border: 4px solid green;
+}
+
+/* form {
+    clear: left;
+} */
+
+/* to hover */
+#sfu_link:hover {
+    background-color: blue;
+}
+
+
