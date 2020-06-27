@@ -8,7 +8,7 @@ const { Pool } = require('pg');
 var pool;
 pool = new Pool({
   connectionString: process.env.DATABASE_URL
-  // connectionString: 'postgres://michaelchang:domics2017@localhost/asn4proto'
+  // connectionString: '' // go to .env
 })
 
 var app = express()
