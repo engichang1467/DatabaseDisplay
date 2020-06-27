@@ -8,6 +8,7 @@ const { Pool } = require('pg');
 var pool;
 pool = new Pool({
   connectionString: process.env.DATABASE_URL
+  // connectionString: 'postgres://michaelchang:domics2017@localhost/asn4proto'
 })
 
 var app = express()
@@ -65,7 +66,7 @@ app.post('/addusers', (req, res) =>{
     if (err)
       throw err
     console.log("User added")
-    alert("user")
+    // alert("user")
   })
 
   // var getUsersQuery = `SELECT * FROM person`
@@ -93,7 +94,7 @@ app.post('/modifyname', (req, res) => {
     if (err)
       throw err
     console.log('modified name')
-    alert('modified name')
+    // alert('modified name')
   })
 })
 
@@ -108,7 +109,7 @@ app.post('/modifyheight', (req, res)=>{
     if (err)
       throw err
     console.log('modified height')
-    alert('modified height')
+    // alert('modified height')
   })
 })
 
@@ -123,7 +124,7 @@ app.post('/modifysize', (req, res) => {
     if (err)
       throw err
     console.log('modified size')
-    alert('modified size')
+    // alert('modified size')
   })
 })
 
@@ -138,7 +139,7 @@ app.post('/modifytype', (req, res) => {
     if (err)
       throw err
     console.log('modified type')
-    alert('modified type')
+    // alert('modified type')
   })
 })
   
@@ -153,7 +154,7 @@ app.post('/deleteusers', (req, res) => {
       throw err
     console.log('user deleted')
     // response.status(200).send(`User deleted with ID: ${id}`)  
-    alert('user deleted')
+    // alert('user deleted')
   })
 
   var getUsersQuery = `SELECT * FROM person`
